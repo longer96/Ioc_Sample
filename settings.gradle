@@ -1,0 +1,3 @@
+rootProject.name='Ioc_Sample'
+include ':app'
+include ':library'
