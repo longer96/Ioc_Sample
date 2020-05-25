@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.example.library.annotations.ContentView;
 import com.example.library.annotations.BindView;
+import com.example.library.annotations.OnClick;
 
 import androidx.annotation.Nullable;
 
@@ -19,13 +20,6 @@ public class MainActivity extends BaseActivity {
     public Button button;
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-
-    }
-
-    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -35,5 +29,18 @@ public class MainActivity extends BaseActivity {
                 Toast.makeText(MainActivity.this,"反射", Toast.LENGTH_SHORT).show();
             }
         });
+
+        button.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return false;
+            }
+        });
     }
+
+    @OnClick(R.id.btn)
+    public void show(View view){
+        Toast.makeText(MainActivity.this,"反射2", Toast.LENGTH_SHORT).show();
+    }
+
 }

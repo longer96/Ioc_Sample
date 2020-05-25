@@ -21,7 +21,14 @@ public class InjectManaget {
         // 控件的注入
         injectWidget(activity);
 
-        // TODO 点击事件的注入
+        // 点击事件的注入
+        injectEvents(activity);
+    }
+
+    private static void injectEvents(Activity activity) {
+        //获取类
+
+
     }
 
     private static void injectWidget(Activity activity) {
