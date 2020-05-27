@@ -23,10 +23,13 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+    }
+
+    private void initEvent() {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"反射", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,"反射", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -40,7 +43,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.btn)
     public void show(View view){
-        Toast.makeText(MainActivity.this,"反射2", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"反射 Aop", Toast.LENGTH_SHORT).show();
     }
 
 }
